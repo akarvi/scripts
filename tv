@@ -1,0 +1,80 @@
+#!/bin/env bash
+
+# Selection menu items goes here
+#SELECTION="3sat ARD ARTE BR HR KiKa MDR N24 NASA-TV NDR Phoenix RBB Sportschau SR SWR WDR ZDF ZDFinfo ZDFkultur ZDFneo ..Quit"
+SELECTION="3sat ARD ARTE BR HR KiKa MDR N24 NASA-TV NDR Phoenix RBB SR SWR WDR ZDF ZDFinfo ZDFkultur ZDFneo ..Quit"
+
+select options in $SELECTION; do
+
+# here using the if statements you can perform the required  operation
+if [ "$options" = "ARD" ]; then
+    mpv http://daserste_live-lh.akamaihd.net/i/daserste_de@91204/master.m3u8
+
+elif [ "$options" = "ZDF" ]; then
+    mpv http://zdf1314-lh.akamaihd.net/i/de14_v1@392878/master.m3u8?b=0-736
+
+elif [ "$options" = "BR" ]; then
+    mpv http://livestreams.br.de/i/bfssued_germany@119890/master.m3u8 
+
+elif [ "$options" = "HR" ]; then
+    mpv http://www.hr-online.de/website/fernsehen/sendungen/livestream.jsp 
+
+elif [ "$options" = "MDR" ]; then
+    mpv http://mdr_sachsen_hls-lh.akamaihd.net/i/livetvmdrsachsen_de@106902/master.m3u8?bkup=off 
+
+elif [ "$options" = "N24" ]; then
+    mpv http://n24-live.hls.adaptive.level3.net/hls-live/n24-pssimn24live/_definst_/live.m3u8 
+
+#elif [ "$options" = "Sportschau" ]; then
+#    mpv http://emwdr-lh.akamaihd.net/i/em2016_wdr@182638/master.m3u8?dw=10
+
+elif [ "$options" = "NDR" ]; then
+    mpv http://ndr_fs-lh.akamaihd.net/i/ndrfs_nds@119224/master.m3u8 
+
+elif [ "$options" = "RBB" ]; then
+    mpv http://rbb_live-lh.akamaihd.net/i/rbb_brandenburg@107638/master.m3u8 
+
+elif [ "$options" = "SR" ]; then
+    mpv http://livestream.sr-online.de/live.m3u8 
+
+elif [ "$options" = "SWR" ]; then
+    mpv http://swrbw-lh.akamaihd.net/i/swrbw_live@196738/master.m3u8 
+
+elif [ "$options" = "WDR" ]; then
+    mpv http://www.metafilegenerator.de/WDR/WDR_FS/m3u8/wdrfernsehen.m3u8 
+
+elif [ "$options" = "ZDFneo" ]; then
+    mpv http://zdf1314-lh.akamaihd.net/i/de13_v1@392877/master.m3u8?b=0-736
+
+elif [ "$options" = "ZDFinfo" ]; then
+    mpv http://zdf1112-lh.akamaihd.net/i/de12_v1@392882/master.m3u8?b=0-736
+
+elif [ "$options" = "ZDFkultur" ]; then
+    mpv http://zdf1112-lh.akamaihd.net/i/de11_v1@392881/master.m3u8?b=0-736
+
+elif [ "$options" = "ARTE" ]; then
+    mpv http://artelive-lh.akamaihd.net/i/artelive_de@393591/index_5_av-p.m3u8?sd=10&rebase=on
+
+elif [ "$options" = "3sat" ]; then
+    mpv http://zdf0910-lh.akamaihd.net/i/dach10_v1@392872/master.m3u8?dw=0 
+
+elif [ "$options" = "Phoenix" ]; then
+    mpv http://zdf0910-lh.akamaihd.net/i/de09_v1@392871/master.m3u8?dw=0 
+
+elif [ "$options" = "KiKa" ]; then
+    mpv http://kika_geo-lh.akamaihd.net/i/livetvkika_de@75114/master.m3u8
+
+elif [ "$options" = "NASA-TV" ]; then
+    mpv http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8 
+
+elif [ "$options" = "..Quit" ]; then
+        echo "You have selected $options"
+    exit
+
+# if something else is selected, show the menu again
+else
+    clear;
+    echo "please select some options"
+
+fi
+done

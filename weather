@@ -1,0 +1,22 @@
+#!/bin/env bash
+
+SELECTION="TOWN_1 TOWN_2 ..Quit"
+
+echo "Wetter anzeigen in .."
+select options in $SELECTION; do
+
+	if [ "$options" = "<TOWN_1>" ]; then
+		curl wttr.in/Dresden
+
+	elif [ "$options" = "<TOWN_2>" ]; then
+		curl wttr.in/Colditz
+
+	elif [ "$options" = "..Quit" ]; then
+		echo "Quit.."
+		exit
+
+	else
+		clear;
+		echo "please select one option"
+	fi
+done

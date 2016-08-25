@@ -2,7 +2,7 @@
 
 SELECTION="TOWN_1 TOWN_2 ..Quit"
 
-echo "Wetter anzeigen in .."
+echo "Show weather in .."
 select options in $SELECTION; do
 
 	if [ "$options" = "<TOWN_1>" ]; then
@@ -17,6 +17,6 @@ select options in $SELECTION; do
 
 	else
 		clear;
-		echo "please select one option"
+		echo "Please select one option"
 	fi
 done

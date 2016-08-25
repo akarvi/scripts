@@ -6,10 +6,10 @@ echo "Wetter anzeigen in .."
 select options in $SELECTION; do
 
 	if [ "$options" = "<TOWN_1>" ]; then
-		curl wttr.in/Dresden
+		curl wttr.in/TOWN_1
 
 	elif [ "$options" = "<TOWN_2>" ]; then
-		curl wttr.in/Colditz
+		curl wttr.in/TOWN_2
 
 	elif [ "$options" = "..Quit" ]; then
 		echo "Quit.."

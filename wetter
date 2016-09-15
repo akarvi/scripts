@@ -2,7 +2,7 @@
 
 if [ "$1" == "--help" ]; then
 	echo "wetter shows weather incl. 6 day forecast in town"
-	echo "Usage: wetter town"
+	echo "usage: wetter town"
 	exit 0
 fi
 clear

@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-if [ "$1" == "--help" ]; then
+if [ "$1" == "--help" ] || [ "$1" == "-h" ] || [ "$1" == "" ]; then
 	echo "wetter shows weather incl. 6 day forecast in town"
 	echo "usage: wetter town"
 	exit 0

@@ -3,8 +3,8 @@
 if [[ "$1" =~ : ]]
 	then
 		echo "ping6:"
-		ping6 -O $1 | while read x; do echo "$(date '+%H.%m.%Y %T') $x"; done
+		ping6 -O $1 | while read x; do echo "$(date '+%d.%m.%Y %T') $x"; done
 	else
 		echo "ping4:"
-		ping -O $1 | while read x; do echo "$(date '+%H.%m.%Y %T') $x"; done
+		ping -O $1 | while read x; do echo "$(date '+%d.%m.%Y %T') $x"; done
 fi

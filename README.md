@@ -2,7 +2,7 @@
 little script helpers
 
 # tv
-german free digital tv stations (+ NASA-TV) shown by mpv
+german free digital tv stations (+ NASA-TV) shown by mpv (some are obsolete, links have to be fixed)
 
 # warmscreen
 put it in your .xinitrc or .i3/config to adust a little warmer notebook screen
